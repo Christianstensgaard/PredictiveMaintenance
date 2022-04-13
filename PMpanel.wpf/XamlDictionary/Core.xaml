@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <!--Holding all main theme color for the application-->
+    <SolidColorBrush x:Key="BackGround_darkGreen">#132616</SolidColorBrush>
+    <SolidColorBrush x:Key="Purple">#9B44F2</SolidColorBrush>
+    <SolidColorBrush x:Key="DarkGreen">#3FA663</SolidColorBrush>
+    <SolidColorBrush x:Key="Light green">#39BF4D</SolidColorBrush>
+    <SolidColorBrush x:Key="Orange">#F28241</SolidColorBrush>
+
+    
+    <!--Holding all Error colors. Note: Maybe to be Removed-->
+    <SolidColorBrush x:Key="Error">red</SolidColorBrush>
+    
+
+</ResourceDictionary>

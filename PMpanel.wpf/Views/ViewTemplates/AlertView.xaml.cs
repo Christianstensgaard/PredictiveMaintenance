@@ -18,11 +18,44 @@ namespace PMpanel.wpf.ViewTemplates
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class AlerView : UserControl
     {
-        public UserControl1()
+        public AlerView(string bundleName, State state)
         {
             InitializeComponent();
+            ContentLabel.Content = bundleName;
+            AlertState(state);
+            
         }
+
+        public enum State { Go, Caution, Stop}
+        public void AlertState(State state)
+        {
+            CollapsAll();
+            switch (state)
+            {
+                case State.Go:
+                    State_GO.Visibility = Visibility.Visible;
+                    break;
+                case State.Caution:
+                    State_Caution.Visibility = Visibility.Visible;
+                    break;
+                case State.Stop:
+                    State_Stop.Visibility = Visibility.Visible;
+                    break;
+            }
+        }
+
+
+        private void CollapsAll()
+        {
+            State_GO.Visibility = Visibility.Collapsed;
+            State_Caution.Visibility = Visibility.Collapsed;
+            State_Stop.Visibility = Visibility.Collapsed;
+        }
+
+
+
+
     }
 }

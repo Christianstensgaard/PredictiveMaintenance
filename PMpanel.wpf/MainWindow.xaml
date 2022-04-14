@@ -11,6 +11,8 @@
         Width="1200" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="ToolWindow"
+        Initialized="Window_Initialized"
+        MouseDoubleClick="Window_MouseDoubleClick"
         Closing="Window_Closing">
 
     <Window.Resources>
@@ -24,6 +26,10 @@
 
     <Grid Background="{StaticResource BackGround_darkGreen}" >
         <!--Liste over aktive moduler, grupperet efter stand-->
-        <StackPanel x:Name="StackPanel"/>
+        <StackPanel x:Name="StackPanel">
+            <StackPanel Orientation="Horizontal" Margin="10">
+               
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

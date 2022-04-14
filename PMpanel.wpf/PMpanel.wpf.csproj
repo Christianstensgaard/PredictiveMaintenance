@@ -8,7 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\CautionState.png" />
+    <None Remove="Img\CNCRobot.png" />
+    <None Remove="Img\GoState.png" />
+    <None Remove="Img\StopState.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Views\Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Img\CNCRobot.png" />
+    <Resource Include="Img\StopState.png" />
+    <Resource Include="Img\CautionState.png" />
+    <Resource Include="Img\GoState.png" />
   </ItemGroup>
 
 </Project>

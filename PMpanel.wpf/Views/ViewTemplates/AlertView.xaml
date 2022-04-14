@@ -1,11 +1,16 @@
-﻿<UserControl x:Class="PMpanel.wpf.ViewTemplates.UserControl1"
+﻿<UserControl x:Class="PMpanel.wpf.ViewTemplates.AlerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PMpanel.wpf.ViewTemplates"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="120" d:DesignWidth="270"
+             MinHeight="120"
+             MinWidth="270"
+             MaxHeight="120"
+             MaxWidth="270"
+             >
 
     <UserControl.Resources>
         <ResourceDictionary>
@@ -16,8 +21,74 @@
     </UserControl.Resources>
     
     
-    <Grid Background="AliceBlue">
+    <Grid
+        Background="{StaticResource ContainerBackground}"
+        Margin="5"
+        >
+
         
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            x:Name="ContentLabel"
+            Grid.Column="0"
+            Grid.ColumnSpan="2  "
+            
+            
+            Content="1"
+            FontSize="22"
+            Foreground="{StaticResource Orange}"
+            
+            />
+
+
+        <Image
+            x:Name="State_GO"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="0"
+            Grid.RowSpan="3"
+           
+            Visibility="Collapsed"
+            
+            Source="/Img/GoState.png" Margin="80,5,5,5"
+            />
+
+        <Image
+            x:Name="State_Caution"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="0"
+            Grid.RowSpan="3"
+           
+            Visibility="Collapsed"
+            
+            Source="/Img/CautionState.png" Margin="80,5,5,5"
+            />
+
+        <Image
+            x:Name="State_Stop"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="0"
+            Grid.RowSpan="3"
+           
+            Visibility="Collapsed"
+            
+            Source="/Img/StopState.png" Margin="80,5,5,5"
+            />
+
+
+
     </Grid>
 </UserControl>

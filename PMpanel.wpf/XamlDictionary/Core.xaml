@@ -4,7 +4,17 @@
 
 
     <!--Holding all main theme color for the application-->
-    <SolidColorBrush x:Key="BackGround_darkGreen">#132616</SolidColorBrush>
+    <SolidColorBrush x:Key="BackGround_darkGreen">#162226</SolidColorBrush>
+    <SolidColorBrush x:Key="ContainerBackground">#2B3640</SolidColorBrush>
+    <SolidColorBrush x:Key="one">#7289A6</SolidColorBrush>
+    <SolidColorBrush x:Key="two">#455973</SolidColorBrush>
+    <SolidColorBrush x:Key="three">#9BAEBF</SolidColorBrush>
+    
+    
+    
+    
+    
+    
     <SolidColorBrush x:Key="Purple">#9B44F2</SolidColorBrush>
     <SolidColorBrush x:Key="DarkGreen">#3FA663</SolidColorBrush>
     <SolidColorBrush x:Key="Light green">#39BF4D</SolidColorBrush>

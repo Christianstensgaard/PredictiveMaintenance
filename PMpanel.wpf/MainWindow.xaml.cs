@@ -2,19 +2,9 @@
 using PMpanel.wpf.Views.ViewTemplates;
 using PMpanel.wpf.ViewTemplates;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PMpanel.wpf
 {
@@ -26,7 +16,7 @@ namespace PMpanel.wpf
             ApplicationState.Instance.IsRunning = true;
             InitializeComponent();
         }
-
+        
         /// <summary>
         /// Called on closing.
         /// </summary>

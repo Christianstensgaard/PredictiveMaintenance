@@ -30,60 +30,26 @@ namespace PMpanel.wpf
             
         }
 
-
+        // Demo Generated Collums
         private void Window_Initialized(object sender, EventArgs e)
         {
-            StackPanel HstackPanel = new StackPanel();
-            HstackPanel.Orientation = Orientation.Horizontal;
-            HstackPanel.HorizontalAlignment = HorizontalAlignment.Center;
-            for (int i = 0; i < 4; i++)
-            {
-                AlerView view = new AlerView(i.ToString(), AlerView.State.Stop);
-                HstackPanel.Children.Add(view);
-            }
-
-            StackPanel.Children.Add(HstackPanel);
-
-
-            StackPanel HstackPanel1 = new StackPanel();
-            HstackPanel1.Orientation = Orientation.Horizontal;
-            HstackPanel1.HorizontalAlignment = HorizontalAlignment.Center;
-            for (int i = 0; i < 4; i++)
-            {
-                AlerView view = new AlerView(i.ToString(), AlerView.State.Caution);
-                HstackPanel1.Children.Add(view);
-            }
-
-            StackPanel.Children.Add(HstackPanel1);
-
-
-
-            StackPanel HstackPanel2 = new StackPanel();
-            HstackPanel2.Orientation = Orientation.Horizontal;
-            HstackPanel2.HorizontalAlignment = HorizontalAlignment.Center;
-            for (int i = 0; i < 4; i++)
-            {
-                AlerView view = new AlerView(i.ToString(), AlerView.State.Go);
-                HstackPanel2.Children.Add(view);
-            }
-
-            StackPanel.Children.Add(HstackPanel2);
-
-
+            StackPanel.Children.Add(new AlerView("B21", AlerView.State.Go));
+            StackPanel.Children.Add(new AlerView("B21", AlerView.State.Go));
+            StackPanel.Children.Add(new AlerView("B21", AlerView.State.Go));
 
         }
 
+        //Used for demo only
         private void Window_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            StackPanel.Children.Clear();
-            StackPanel.Children.Add(new HmoduleView(this));
+            
 
         }
 
 
-        /*Der må maks være 3-4 pr. række. */
-
-
+        /*Alle data skal hentes via en forbindelse til serveren. og derefter skal der oprettes de forskellige
+         *Moduler, Hvordan det lige skal gøres skal jeg lige tænkte lidt, så det er Work in progress*/
+        private void GetData() { }
 
 
 

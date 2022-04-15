@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,19 +16,16 @@ using System.Windows.Shapes;
 
 namespace PMpanel.wpf.ViewTemplates
 {
-    /// <summary>
-    /// Interaction logic for UserControl1.xaml
-    /// </summary>
+    
     public partial class AlerView : UserControl
     {
-        public AlerView(string bundleName, State state)
+        public AlerView(string name, State state)
         {
             InitializeComponent();
-            ContentLabel.Content = bundleName;
+            ContentLabel.Content = name;
             AlertState(state);
             
         }
-
         public enum State { Go, Caution, Stop}
         public void AlertState(State state)
         {
@@ -47,6 +45,7 @@ namespace PMpanel.wpf.ViewTemplates
         }
 
 
+
         private void CollapsAll()
         {
             State_GO.Visibility = Visibility.Collapsed;
@@ -54,8 +53,12 @@ namespace PMpanel.wpf.ViewTemplates
             State_Stop.Visibility = Visibility.Collapsed;
         }
 
-
-
-
+        private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }
+
+
+//TODO Denne klasse skal laves om, så den kan passe til begge dashboard. Det giver en mulighed for at genbruge samme element. *Udseende skal nok også laves om!

@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMpanel.wpf", "PMpanel.wpf\PMpanel.wpf.csproj", "{2F15033F-D89B-4337-BB35-04EB563F1C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMserver.console", "PMserver.console\PMserver.console.csproj", "{D8A75535-67E0-4FA1-A41E-DBA0EFB9CE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMserver.console", "PMserver.console\PMserver.console.csproj", "{D8A75535-67E0-4FA1-A41E-DBA0EFB9CE7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTL", "DTL\DTL.csproj", "{16C95490-E05A-4652-8CDD-A3B10D8CD309}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTL", "DTL\DTL.csproj", "{16C95490-E05A-4652-8CDD-A3B10D8CD309}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libarys", "Libarys", "{F8E47102-8A7E-43DB-9AC8-32BF130101EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMpanel.console", "PMpanel.console\PMpanel.console.csproj", "{51E6F870-66CC-42AB-92D1-27125C761841}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{16C95490-E05A-4652-8CDD-A3B10D8CD309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16C95490-E05A-4652-8CDD-A3B10D8CD309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16C95490-E05A-4652-8CDD-A3B10D8CD309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E6F870-66CC-42AB-92D1-27125C761841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E6F870-66CC-42AB-92D1-27125C761841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E6F870-66CC-42AB-92D1-27125C761841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E6F870-66CC-42AB-92D1-27125C761841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,20 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PMserver.console.Server
+namespace PMserver.console.Config
 {
-    public class ServerController
+    public static class ServerState
     {
-
-
-        
-
-
-
-
-
-
-
+        public static bool IsRunning { get; set; }
 
     }
 }

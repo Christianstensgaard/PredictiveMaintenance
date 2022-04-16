@@ -1,18 +1,17 @@
-﻿using PMpanel.wpf.CoreFunctiond.IOTModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PMpanel.wpf.CoreFunctiond
+namespace PMpanel.wpf.CoreFunctiond.IOTModels
 {
     public class SmoduleModel
     {
 
-        public int id { get;}
-        public string Name { get;}
-        public List<SensorModel> connectedSensors { get;}
+        public int id { get; }
+        public string Name { get; }
+        public List<SensorModel> connectedSensors { get; }
 
         public SmoduleModel(int id, string name, List<SensorModel> connectedSensors)
         {

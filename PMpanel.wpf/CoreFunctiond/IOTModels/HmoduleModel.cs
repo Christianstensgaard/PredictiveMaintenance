@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PMpanel.wpf.CoreFunctiond
+namespace PMpanel.wpf.CoreFunctiond.IOTModels
 {
     public class HmoduleModel
     {

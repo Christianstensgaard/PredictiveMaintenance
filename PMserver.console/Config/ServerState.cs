@@ -8,7 +8,7 @@ namespace PMserver.console.Config
 {
     public static class ServerState
     {
-        public static bool IsRunning { get; set;}
+        public static bool IsRunning { get; set;}   //State of the server health
 
     }
 }

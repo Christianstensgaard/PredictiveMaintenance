@@ -13,20 +13,21 @@ namespace PMserver.console.Database.Connection
 
         public void run()
         {
+            //> Connection string to connect the database. 
             SqlConnection connection = new SqlConnection(@"Data Source=192.168.0.200,1433;Initial Catalog=PM;User ID=Christian.lsj;Password=chri1sti2an3");
 
             try
             {
-                connection.Open();
-                SqlDataReader reader; 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM ", connection);
-                reader = cmd.ExecuteReader();
+                connection.Open();                                              //Opning connection to database
+                SqlDataReader reader;                                           //Reader Stream
+                SqlCommand cmd = new SqlCommand("SELECT * FROM ", connection);  //Doing a simple Sql command
+                reader = cmd.ExecuteReader();                                   //Exec Readerstream
 
 
                 ///Read and print to console
                 while (reader.NextResult())
                 {
-                    Console.WriteLine(String.Format("{0} ", reader["FirstName".ToString()]));
+                    Console.WriteLine(String.Format("{0} ", reader["FirstName".ToString()]));   
                 }
 
             }
@@ -39,7 +40,7 @@ namespace PMserver.console.Database.Connection
 
             finally
             {
-                connection.Close();
+                connection.Close(); //Closing Sql-Connection
             }
         }
 

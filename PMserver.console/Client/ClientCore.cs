@@ -66,6 +66,9 @@ namespace PMserver.console.Client
         /// </summary>
         void RemoveLostClients()
         {
+
+
+
             foreach (ClientModel client in lostClients)
             {
                 clients.Remove(client);

@@ -1,4 +1,6 @@
-﻿using PMserver.console.Config;
+﻿using DTL.Connection;
+using PMserver.console.Client;
+using PMserver.console.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +13,14 @@ namespace PMserver.console.Server
 {
     public class ServerCore
     {
-        private TcpListener serverSocket;
-        private Thread serverThread;
-
+        private TcpListener serverSocket;   //ServerSocket
+        private Thread serverThread;        //ServerThread
+        private ClientCore clientCore;      //ClientCore
 
         public ServerCore()
         {
             //> Getting information and init serversocket.
-            serverSocket = new TcpListener(IPAddress.Parse(ServerInformation.adress), ServerInformation.port);
+            serverSocket = new TcpListener(IPAddress.Parse(ServerConnectionLayer.adress), ServerConnectionLayer.port);
         }
 
 
@@ -32,18 +34,27 @@ namespace PMserver.console.Server
         {
             try
             {
-                ServerState.IsRunning = true;
-                serverSocket.Start();
-                serverThread = new Thread(Server);
-                serverThread.Start();
+                ServerState.IsRunning = true;       //Setting Server state to Running
+                serverSocket.Start();               //Starting ServerSocket
+                clientCore = new ClientCore();      //Init ClientCore class
+                clientCore.Start();                 //Starting ClientCore class
+                serverThread = new Thread(Server);  //Creating thread
+                serverThread.Start();               //Starting Thread
             }
             
             catch (Exception)
             {
                 //TODO Error logging ServerCore
-                ServerState.IsRunning=false;
-                throw;
+                ServerState.IsRunning=false;        //Setting Server state to false
+                throw;                              //Throw error exception
             }
+        }
+
+        public void Stop()
+        {
+            ServerState.IsRunning=false;
+            serverSocket.Stop();
+
         }
 
 
@@ -54,12 +65,17 @@ namespace PMserver.console.Server
         {
             while (ServerState.IsRunning)
             {
-                //> Directing new client to ClientCore.
-
-
-
-
-
+                try
+                {
+                    Console.WriteLine("Waiting for client to connect");
+                    //> Directing new client to ClientCore.
+                    TcpClient client = serverSocket.AcceptTcpClient(); //Accepting tcp client
+                    ClientModel clientModel = new ClientModel(client); //Init ClientModel class
+                    clientCore.AddClient(clientModel);                 //Adding client to client Core
+                }
+                catch (Exception)
+                {
+                }
 
 
             }

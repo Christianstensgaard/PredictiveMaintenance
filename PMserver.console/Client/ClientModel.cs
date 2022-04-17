@@ -13,7 +13,7 @@ namespace PMserver.console.Client
 
         public ClientModel(TcpClient client)
         {
-            this.client = client;
+            this.client = client;   //Setting Tcp-Client
         }
 
 

@@ -11,13 +11,4 @@
     <ProjectReference Include="..\DTL\DTL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Client\" />
-    <Folder Include="Server\" />
-  </ItemGroup>
-
 </Project>

@@ -23,7 +23,7 @@
         </ResourceDictionary>
     </Window.Resources>
 
-
+    <!--Single-Page Xaml style-->
     <Grid Background="{StaticResource BackGround_darkGreen}" >
         <!--Liste over aktive moduler, grupperet efter stand-->
         <StackPanel x:Name="StackPanel">

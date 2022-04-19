@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTL", "DTL\DTL.csproj", "{1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libarys", "Libarys", "{F8E47102-8A7E-43DB-9AC8-32BF130101EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMpanel.console", "PMpanel.console\PMpanel.console.csproj", "{51E6F870-66CC-42AB-92D1-27125C761841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMpanel.console", "PMpanel.console\PMpanel.console.csproj", "{51E6F870-66CC-42AB-92D1-27125C761841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print", "Print\Print.csproj", "{2BC5935E-9833-424D-B07B-2E90F81D49BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +37,17 @@ Global
 		{51E6F870-66CC-42AB-92D1-27125C761841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51E6F870-66CC-42AB-92D1-27125C761841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51E6F870-66CC-42AB-92D1-27125C761841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC5935E-9833-424D-B07B-2E90F81D49BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC5935E-9833-424D-B07B-2E90F81D49BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC5935E-9833-424D-B07B-2E90F81D49BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC5935E-9833-424D-B07B-2E90F81D49BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{16C95490-E05A-4652-8CDD-A3B10D8CD309} = {F8E47102-8A7E-43DB-9AC8-32BF130101EC}
+		{2BC5935E-9833-424D-B07B-2E90F81D49BE} = {F8E47102-8A7E-43DB-9AC8-32BF130101EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}

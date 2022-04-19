@@ -16,6 +16,4 @@ StreamReader reader = new StreamReader(client.GetStream());
 while (true)
 {
     Console.WriteLine(reader.ReadLine());
-    Console.ReadLine();
-
 }

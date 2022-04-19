@@ -12,11 +12,11 @@ namespace DTL.Communication.StreamConverter.Models
         public string Name { get; set; }
         public List<SensorModuleModel> LinkedSmodules { get; set; }
 
-        public HovedModuleModel(int id, string name, List<SensorModuleModel> linkedSmodules)
+        public HovedModuleModel(int id, string name)
         {
             Id = id;
             Name = name;
-            LinkedSmodules = linkedSmodules;
+            LinkedSmodules = new List<SensorModuleModel>();
         }
     }
 }

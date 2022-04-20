@@ -13,7 +13,13 @@ TcpClient client = new TcpClient(ServerConnectionLayer.adress, ServerConnectionL
 StreamWriter writer = new StreamWriter(client.GetStream());
 StreamReader reader = new StreamReader(client.GetStream());
 
-while (true)
+while (client.Connected)
 {
-    Console.WriteLine(reader.ReadLine());
+    try
+    {
+        Console.WriteLine(reader.ReadLine());
+    }
+    catch (Exception)
+    {
+    }
 }

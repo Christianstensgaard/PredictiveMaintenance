@@ -1,4 +1,6 @@
-﻿using DTL.Safety;
+﻿using DTL.Communication.StreamConverter;
+using DTL.Safety;
+using PMserver.console.ConnectedServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,16 +40,17 @@ namespace PMserver.console.Client
 
         private void Worker()
         {
-            //Der skal laves et håndtryk som er sikker, så andre ikke bare lytter på denne port. og får tilsendt data.
 
 
             while (client.Connected)
             {
                 try
                 {
-                    writer.WriteLine(cryption.Encryption("hej"));
+                    ConvertToStreamable convertToStreamable = new ConvertToStreamable(ProductionLine.GetInstance.getAll());
+                    writer.WriteLine(convertToStreamable.Convert());
                     writer.Flush();
-                    Thread.Sleep(frequencyWriter);
+                    client.Close();
+                    Print.Print.Green("client exited with no error ");
                 }
 
                 catch (Exception)

@@ -52,7 +52,7 @@ namespace DTL.Communication.StreamConverter
             Console.WriteLine(hovedModuleModel.Name);
             Console.WriteLine(buffer[currentPlacement]);
 
-
+            /*For now this is only used for testing, and will be remade later*/
 
 
 
@@ -93,12 +93,11 @@ namespace DTL.Communication.StreamConverter
                 || buffer[index+1] == '$'
                 || buffer[index+1] == '@';
         }
-
-
         /// <summary>
-        /// Converting string to SystemLine
+        /// Converting String to SystemLine
         /// </summary>
-        /// <returns></returns>
+        /// <param name="startingpoint">placement of current char[] placement</param>
+        /// <returns>systemLineModel</returns>
         private SystemLineModel TosystemLine(int startingpoint)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -109,7 +108,11 @@ namespace DTL.Communication.StreamConverter
             currentPlacement = startingpoint+1;
             return new SystemLineModel(0, stringBuilder.ToString());
         }
-
+        /// <summary>
+        /// Converting from string to HovedModule
+        /// </summary>
+        /// <param name="startingpoint">placement of current char[] placement</param>
+        /// <returns>HovedModuleModel</returns>
         private HovedModuleModel ToHovedModule(int startingpoint)
         {
             StringBuilder sb = new StringBuilder();
@@ -121,6 +124,11 @@ namespace DTL.Communication.StreamConverter
             return new HovedModuleModel(0, sb.ToString());
         }
 
+        /// <summary>
+        /// Converting from String into SensorModule 
+        /// </summary>
+        /// <param name="startingpoint">placement of current char[] placement</param>
+        /// <returns>SensorModuleModel</returns>
         private SensorModuleModel TosensorModule(int startingpoint)
         {
             StringBuilder sb = new StringBuilder();

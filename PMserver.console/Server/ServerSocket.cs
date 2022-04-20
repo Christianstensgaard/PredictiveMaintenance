@@ -18,7 +18,7 @@ namespace PMserver.console.Server
 
         public ServerSocket()
         {
-            //Setup -> Tcp 
+            //Setup -> TCP 
             serverSocket = new TcpListener(IPAddress.Parse(ServerConnectionLayer.adress), ServerConnectionLayer.port);
             serverThred = new Thread(Worker);   //Init the ServerThread.
         }
@@ -34,7 +34,7 @@ namespace PMserver.console.Server
             try
             {
                 ServerState.IsRunning = true;   //Setting the ServerState - used to stop all thread if false.
-                serverSocket.Start();           //Starting Tcp server socket.
+                serverSocket.Start();           //Starting TCP server socket.
                 serverThred.Start();
                 return true;
             }
@@ -60,7 +60,7 @@ namespace PMserver.console.Server
                 try
                 {
                     Print.Print.Yellow("Waiting for client to connect");
-                    TcpClient client = serverSocket.AcceptTcpClient();          //Accepting tbc client
+                    TcpClient client = serverSocket.AcceptTcpClient();          //Accepting TCP client
                     Print.Print.Yellow("Client has Connected");
                     ClientController controller = new ClientController(client); //Init the Client Controller class
                     controller.Start();                                         //Starting the Worker on the client Controller "Running on it's own Thread"

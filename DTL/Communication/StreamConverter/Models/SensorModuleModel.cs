@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTL.Communication.StreamConverter.Models.EmbededModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,14 @@ namespace DTL.Communication.StreamConverter.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public List<SensorModel> connectedSensors { get; set; }
 
 
-
-
+        public SensorModuleModel(int id, string name)
+        {
+            Id = id;
+            Name = name;
+            connectedSensors = new List<SensorModel>();
+        }
     }
 }

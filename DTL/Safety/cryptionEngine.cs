@@ -3,8 +3,8 @@ namespace DTL.Safety
 {
     public class cryptionEngine
     {
-        /*Lige Pt er der ikke lavet noget som kryptere output data. men det er nemt at tilføje fordi det kommer forbi her, så
-         *Der er hurtig mulighed for at tilføje det.*/
+        /*  The year is 2022 and everything going out should be encrypted, therefor this class will do 
+            that job, for now it just returns the input string. */
 
 
         public string Encryption(string input)

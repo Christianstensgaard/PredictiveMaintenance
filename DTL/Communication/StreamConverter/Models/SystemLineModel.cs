@@ -12,15 +12,11 @@ namespace DTL.Communication.StreamConverter.Models
         public string Name { get; set; }
         public List<HovedModuleModel> LinkedHmodules { get; set; }
 
-
-
-
-
-
-
-
-
-
-
+        public SystemLineModel(int id, string name)
+        {
+            Id = id;
+            Name = name;
+            LinkedHmodules = new List<HovedModuleModel>();
+        }
     }
 }

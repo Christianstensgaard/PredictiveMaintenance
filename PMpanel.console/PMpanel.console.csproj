@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DTL\DTL.csproj" />
+    <ProjectReference Include="..\Print\Print.csproj" />
   </ItemGroup>
 
 </Project>

@@ -19,12 +19,13 @@ while (client.Connected)
     {
         Console.WriteLine(reader.ReadLine());
 
-
+        /*Convert into classes*/
 
         client.Close();
         Console.ReadLine();
     }
     catch (Exception)
     {
+
     }
 }

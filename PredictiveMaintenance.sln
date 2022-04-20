@@ -13,7 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libarys", "Libarys", "{F8E4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PMpanel.console", "PMpanel.console\PMpanel.console.csproj", "{51E6F870-66CC-42AB-92D1-27125C761841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print", "Print\Print.csproj", "{2BC5935E-9833-424D-B07B-2E90F81D49BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Print", "Print\Print.csproj", "{2BC5935E-9833-424D-B07B-2E90F81D49BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{CB923AA2-0AD6-46B1-95A9-C7C37A84025C}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Users\Christian-WorkStatio\Desktop\ReadMe.pdf = ..\..\..\..\..\Users\Christian-WorkStatio\Desktop\ReadMe.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,7 +8,8 @@ namespace DTL.Communication
 {
     public class CommunicationLayer
     {
-        /* Denne klasse har til opgave at lave en struktur for hvordan klienten og serveren pakker og ud´pakker deres data */
+
+        /*Tænker det kan være en ide at lave det via en DLL fordi det skal bruges både på klient og serverens side*/
 
         /*
             

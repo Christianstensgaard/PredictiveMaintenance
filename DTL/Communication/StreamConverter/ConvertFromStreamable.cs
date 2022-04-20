@@ -40,30 +40,61 @@ namespace DTL.Communication.StreamConverter
         }
 
 
-        private string convertWithSystemLine()
+        private SystemLineModel convertWithSystemLine()
         {
-            Debug.WriteLine("Converting Input with SystemLine");
-            StringBuilder sb = new StringBuilder();
-
-            SystemLineModel systemLine = TosystemLine(currentPlacement);
-            Console.WriteLine(currentPlacement);
-
-            HovedModuleModel hovedModuleModel = ToHovedModule(currentPlacement);
-            Console.WriteLine(hovedModuleModel.Name);
-            Console.WriteLine(buffer[currentPlacement]);
-
-            /*For now this is only used for testing, and will be remade later*/
+            SystemLineModel lineModel;
 
 
+            //Get Syntax
+
+            while(currentPlacement < buffer.Length)
+            {
+                SystemLineModel systemLine;
+
+                switch (buffer[currentPlacement])
+                {
+                    case '#':
+                        Console.WriteLine("SystemLineFound");
+                        systemLine = TosystemLine(currentPlacement);
+
+                        //TODO jeg er nået hertil, jeg er begyndt på at samle en string til de tilhørende klasser
 
 
 
-            return string.Empty;
+
+                        Console.WriteLine(systemLine.Name);
+
+                        break;
+                    case '$':
+                        Console.WriteLine("HovedModuleFound");
+                        break;
+                    case '@':
+                        Console.WriteLine("SensorModuleFound");
+                        break;
+                }
+
+
+                currentPlacement++;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            return null;
         }
 
         public string ConvertWithNullSystemLine()
         {
-
+            
 
             return string.Empty;
         }
@@ -93,6 +124,10 @@ namespace DTL.Communication.StreamConverter
                 || buffer[index+1] == '$'
                 || buffer[index+1] == '@';
         }
+
+
+
+
         /// <summary>
         /// Converting String to SystemLine
         /// </summary>

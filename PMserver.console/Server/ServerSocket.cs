@@ -46,33 +46,29 @@ namespace PMserver.console.Server
 
         public void Stop()
         {
-            Print.Print.Red("Stopping server");
-            ServerState.IsRunning = false;
-            serverSocket.Stop();
+            Print.Print.Red("Stopping server"); //Printing to console
+            ServerState.IsRunning = false;      //Setting server state
+            serverSocket.Stop();                //Stopping TCB socket
         }
 
 
         private void Worker()
         {
-
             while (ServerState.IsRunning)
             {
                 try
                 {
-                    Print.Print.Yellow("Waiting for client to connect");
+                    Print.Print.Yellow("Waiting for client to connect");        //
                     TcpClient client = serverSocket.AcceptTcpClient();          //Accepting TCP client
-                    Print.Print.Yellow("Client has Connected");
+                    Print.Print.Yellow("Client has Connected");                 //
                     ClientController controller = new ClientController(client); //Init the Client Controller class
                     controller.Start();                                         //Starting the Worker on the client Controller "Running on it's own Thread"
                 }
                 catch (Exception e)
                 {
-
-                    Print.Print.Red($"Error + {e}");
+                    Print.Print.Red($"Error + {e}");    //Print Error                        
                 }
             }
         }
-
-
     }
 }

@@ -18,6 +18,11 @@ while (client.Connected)
     try
     {
         Console.WriteLine(reader.ReadLine());
+
+
+
+        client.Close();
+        Console.ReadLine();
     }
     catch (Exception)
     {

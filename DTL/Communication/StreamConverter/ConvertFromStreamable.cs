@@ -51,25 +51,25 @@ namespace DTL.Communication.StreamConverter
             {
                 SystemLineModel systemLine;
 
+
                 switch (buffer[currentPlacement])
                 {
                     case '#':
                         Console.WriteLine("SystemLineFound");
                         systemLine = TosystemLine(currentPlacement);
-
                         //TODO jeg er nået hertil, jeg er begyndt på at samle en string til de tilhørende klasser
-
-
-
-
                         Console.WriteLine(systemLine.Name);
 
                         break;
                     case '$':
                         Console.WriteLine("HovedModuleFound");
+                        HovedModuleModel hovedModule = ToHovedModule(currentPlacement);
+                        Console.WriteLine(hovedModule.Name);
                         break;
                     case '@':
                         Console.WriteLine("SensorModuleFound");
+                        SensorModuleModel sensorModuleModel = TosensorModule(currentPlacement);
+                        Console.WriteLine(sensorModuleModel.Name);
                         break;
                 }
 

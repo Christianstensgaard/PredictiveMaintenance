@@ -48,10 +48,5 @@ namespace PMserver.console.ConnectedServices
         {
             return systemLines;
         }
-
-
-
-
-
     }
 }
